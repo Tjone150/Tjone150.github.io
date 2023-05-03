@@ -24,7 +24,7 @@
 					</div>
 
 				<!-- Header -->
-					<header id="header">
+					<header id="header" class="heading">
 						<a href="index.html" class="logo">Projects</a>
 					</header>
 
@@ -43,15 +43,38 @@
 					<div id="main">
 
 						<!-- Featured Post -->
+						<style>
+							.body {
+								text-align: center;
+								font-size: 16px;
+								font-family: Raleway;
+								font-weight: normal;
+							}
+
+							.heading {
+								text-align: center;
+								font-size: 32px;
+								font-family: Raleway;
+								font-weight: bold;
+							}
+
+							.subHeading {
+								text-align: center;
+								font-size: 24px;
+								font-family: Raleway;
+								font-weight: normal;
+							}
+						</style>
+
 							<article class="post featured">
 								<header class="major">
 									<span class="date">April 12, 2023</span>
 									<h2><a href="https://github.com/Tjone150/Portfolio_Projects/tree/main/Exoneration%20Project"target= "_blank" class="image main"><img src="images/Dashboard1.png">Project 1:<br />
 									Exoneration Analysis</a></h2>
-									<p>In this project, the focus was on exploring whether minority individuals face a higher prevalence <br />
-										of systemic injustice in the criminal justice system compared to non-minority individuals. <br />
-										The project focused on exonerations, which occur when individuals are released from conviction due <br />
-										to various factors. The goal was to determine if any particular race or group faced a higher rate of<br /> 
+									<p class="body">In this project, the focus was on exploring whether minority individuals face a higher prevalence 
+										of systemic injustice in the criminal justice system compared to non-minority individuals. 
+										The project focused on exonerations, which occur when individuals are released from conviction due 
+										to various factors. The goal was to determine if any particular race or group faced a higher rate of
 										unjust convictions resulting in exonerations.</p>
 								</header>
 								<!--<a href="https://github.com/Tjone150/Portfolio_Projects/blob/main/Exoneration_Analysis.zip" class="image main"><img src="images/pic01.jpg" alt="" /></a>-->
@@ -70,7 +93,7 @@
 										Road Accident Analysis</a></h2>
 									</header>
 									<a href="https://github.com/Tjone150/Portfolio_Projects/tree/main/Road%20Accidents%20Project" target= "_blank" class="image fit"><img src="images/Project2.png" alt="" /></a>
-									<p>This project analyzed a large dataset of road accident data to provide insights on the <br>
+									<p class="body">This project analyzed a large dataset of road accident data to provide insights on the 
 										causes and casualties, with primary and secondary KPIs and a dashboard created in Excel.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/Tjone150/Portfolio_Projects/tree/main/Road%20Accidents%20Project" target= "_blank" class="button">View Project</a></li>
@@ -85,8 +108,8 @@
 										Target Market Analysis</a></h2>
 									</header>
 									<a href="https://github.com/Tjone150/Portfolio_Projects/tree/main/Target%20Market%20Analysis" target= "_blank" class="image fit"><img src="images/Project3.png" alt="" /></a>
-									<p>This project aimed to analyze sales data from kaggle.com for 2019 to gain insights into <br>
-										sales trends and customer behavior using SQL, Excel, and PowerBI. The objective was to gain <br>
+									<p class="body">This project aimed to analyze sales data from kaggle.com for 2019 to gain insights into 
+										sales trends and customer behavior using SQL, Excel, and PowerBI. The objective was to gain
 										hands-on experience and proficiency in data analysis and visualization techniques.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/Tjone150/Portfolio_Projects/tree/main/Target%20Market%20Analysis" target= "_blank" class="button">View Project</a></li>
@@ -185,14 +208,15 @@
 								</ul>
 							</form>
 						</section>
+						
 						<script>
 							const form = document.querySelector('form');
 							form.addEventListener('submit', (event) => {
 								const name = form.elements.name.value.replace(/\+/g, ' ');
 								const email = decodeURIComponent(form.elements.email.value);
 								const message = form.elements.message.value;
-								const body = `Name: ${name} \nEmail: ${email} \nMessage: ${message}`;
-								event.target.action = `mailto:tel.jones@hotmail.com?subject=${name}&body=${body}`;
+								const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+								event.target.action = `mailto:tel.jones@hotmail.com?body=${body}`;
 							});
 						</script>
 						<section class="split contact">
