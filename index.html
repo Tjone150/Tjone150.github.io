@@ -185,6 +185,16 @@
 								</ul>
 							</form>
 						</section>
+						<script>
+							const form = document.querySelector('form');
+							form.addEventListener('submit', (event) => {
+								const name = form.elements.name.value.replace(/\+/g, ' ');
+								const email = decodeURIComponent(form.elements.email.value);
+								const message = form.elements.message.value;
+								const body = `Name: ${name} \nEmail: ${email} \nMessage: ${message}`;
+								event.target.action = `mailto:tel.jones@hotmail.com?subject=${name}&body=${body}`;
+							});
+						</script>
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
